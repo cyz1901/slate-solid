@@ -44,10 +44,7 @@ const buildDecorators: DecoratorsBuilder = (
 
 type ElementRenderersBuilder = (
   renderers: Record<string, (props: any) => JSXElement>
-) => [
-  (props: any) => JSXElement,
-  (type: string, comp: JSX.FunctionElement) => void
-];
+) => [(props: any) => JSXElement, (type: string, comp: any) => void];
 const buildElementRenderers: ElementRenderersBuilder = (
   renderers: Record<string, (props: any) => JSXElement>
 ) => {
@@ -72,10 +69,7 @@ const buildElementRenderers: ElementRenderersBuilder = (
 
 type LeafRenderersBuilder = (
   renderers: Record<string, (props: any) => JSXElement>
-) => [
-  (props: any) => JSXElement,
-  (type: string, comp: JSX.FunctionElement) => void
-];
+) => [(props: any) => JSXElement, (type: string, comp: any) => void];
 const buildLeafRenderers: LeafRenderersBuilder = (
   renderers: Record<string, (props: any) => JSXElement>
 ) => {
